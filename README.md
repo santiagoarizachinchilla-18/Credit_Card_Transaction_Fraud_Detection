@@ -32,6 +32,12 @@ Implementación de **Isolation Forest** para identificar transacciones fraudulen
 - **Muy bajo FPR (~0.07–0.17%)**  
   Esto significa pocas alarmas falsas en transacciones legítimas.
 
+### Resumen de impacto y calidad de detección
+
+En un conjunto de test con ~71.200 transacciones (incluyendo 123 fraudes reales), el modelo logra capturar entre el **19.5% y 24%** de los fraudes reales con una precisión de **20–31%** y una tasa de falsos positivos extremadamente baja (**<0.2%** de las transacciones legítimas).
+
+Esto representa un **detector inicial robusto y práctico**: minimiza el impacto negativo en usuarios legítimos (muy pocas verificaciones innecesarias) mientras identifica un porcentaje significativo de fraudes sin necesidad de datos etiquetados masivos.  
+Aunque el recall es moderado (típico en métodos no supervisados puros con PCA), el excelente control de falsos positivos y la mejora en precisión tras optimización demuestran **valor real en escenarios productivos** como filtro de primer nivel, complementario a reglas de negocio o modelos supervisados.
 ---
 
 # Tecnologías utilizadas
